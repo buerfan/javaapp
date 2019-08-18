@@ -14,5 +14,6 @@
         
         <mapping class="com.java.model.BookModel"/>
         <mapping class="com.java.model.ResearchModel"/>
+        <mapping class="com.java.model.SignupModel"/>
     </session-factory>
 </hibernate-configuration>
