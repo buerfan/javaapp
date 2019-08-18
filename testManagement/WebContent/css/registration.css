@@ -1,0 +1,12 @@
+.container{
+	margin:auto;
+	padding:25px;
+	width: 60%;
+	background-color: blue;
+}
+
+input[type=text], input[type=password]
+{
+	width:100%;
+	border:none;
+}
