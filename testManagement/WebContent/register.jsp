@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,9 +24,12 @@
 				name="password"> <br>
 			<label>Re-Type Password</label><br> <input type="password"
 				placeholder="Enter Password Again" required name="retype_pass"><br>
-			<label>Date of Birth</label><br> <input type="datetime-local"
+			<label>Date of Birth</label><br> 
+			
+			
+			<input type="date"
 				placeholder="Enter Last Name" required name="datetime"> <br>
-			<label>Sex</label><br> <select name="sex">
+			<label>Sex   </label><br> <select name="sex">
 				<option value="male">Male</option>
 				<option value="female">Female</option>
 			</select> <br>
@@ -32,12 +37,12 @@
 				By creating an account you agree to our <a href="#"
 					style="color: dodgerblue">Terms & Privacy</a>.
 			</p>
-
 			<div>
 			
-				<c:if test="${action='signup'}">
+				<c:if test="${event=='register'}">
 					<input type="hidden" value="register" name="event">
 				</c:if>
+				
 				<button type="button" class="cancelbtn">Cancel</button>
 				<button type="submit" class="signupbtn">Sign Up</button>
 			</div>

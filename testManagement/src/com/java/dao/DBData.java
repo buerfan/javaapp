@@ -34,7 +34,6 @@ public class DBData {
 		BookModel bookModel = (BookModel) queryExecuteable.list().get(0);
 
 		return bookModel;
-
 	}
 
 	public List<BookModel> getAllBooks() {

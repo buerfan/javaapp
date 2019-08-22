@@ -1,6 +1,8 @@
 package com.java.model;
 
-import java.sql.Date;
+
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,8 +35,20 @@ public class SignupModel {
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 	
+	
+
 	@Column(name="sex")
 	private String sex;
+
+	
+	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 
 	public String getEmail() {
 		return email;
@@ -76,13 +90,7 @@ public class SignupModel {
 		this.retypePassword = retypePassword;
 	}
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+	
 
 	public String getSex() {
 		return sex;

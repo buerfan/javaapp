@@ -43,7 +43,6 @@ public class BookServlet extends HttpServlet {
 				BookModel bookModel = db.getBookById(id);
 				req.setAttribute("books", bookModel);
 				req.setAttribute("action", "update");
-
 				rd = req.getRequestDispatcher("/newbook.jsp");
 
 			}
@@ -51,9 +50,7 @@ public class BookServlet extends HttpServlet {
 			{
 				int id = Integer.parseInt(req.getParameter("id").toString());
 				BookModel bookModel = new BookModel();
-				
 				bookModel.setId(id);
-				
 				db.deleteBook(bookModel);
 				List<BookModel> bookModel1 = db.getAllBooks();
 				req.setAttribute("books", bookModel1);
